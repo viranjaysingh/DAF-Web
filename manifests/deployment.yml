@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: viranjaysinghdafweb 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: viranjaysinghdafweb 
+    spec:
+      containers:
+        - name: viranjaysinghdafweb 
+          image: daftestweb.azurecr.io/viranjaysinghdafweb
+          ports:
+          - containerPort: 80
